@@ -1,0 +1,18 @@
+name: "Podcast Generator"
+author: "Ray Villalobos"
+description: "Generates a feed for a Podcast from YAML file"
+runs: 
+  useing: "docker"
+  image: "Dockerfile"
+branding: 
+  icon: "git-branch"
+  color: "red"
+inputs: 
+  email: 
+    description: the commiter's email address
+    required: true
+    defualt: ${{ github.actor }}@localhost
+  name: 
+    description: the commiter's name
+    required: true
+    defualt: ${{ github.actor }}
